@@ -6,7 +6,7 @@ todo = Flask(__name__)
 
 @todo.route('/')
 def index():
-    return "Hello Home page"
+    return "welcome to home page"
 
 
 @todo.route('/about')
