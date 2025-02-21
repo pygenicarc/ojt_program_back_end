@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 todo = Flask(__name__)
@@ -6,22 +6,22 @@ todo = Flask(__name__)
 
 @todo.route('/')
 def index():
-    return "welcome to home page"
+    return render_template('index.html')
 
 
 @todo.route('/about')
 def about():
-    return "Hello about page"
+    return render_template('about.html')
 
 
 @todo.route('/contact')
 def contact():
-    return "Hello contact page"
+    return render_template('contact.html')
 
 
 @todo.route('/python-course')
 def python_course():
-    return "Hello python course page"
+    return render_template('python_course.html')
 
 
 # I need host, port
